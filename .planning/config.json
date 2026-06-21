@@ -1,0 +1,16 @@
+{
+  "project": "AI Mantra Generator",
+  "workflow": "gsd-core",
+  "current_phase": 2,
+  "docs": {
+    "project": ".planning/PROJECT.md",
+    "requirements": ".planning/REQUIREMENTS.md",
+    "roadmap": ".planning/ROADMAP.md",
+    "state": ".planning/STATE.md"
+  },
+  "preferences": {
+    "execution": "verify-after-each-task",
+    "implementation_style": "component-based",
+    "prototype_stack": "static-html-css-js"
+  }
+}

@@ -1,0 +1,72 @@
+.grid-overlay {
+  --grid-margin: 50px;
+  --grid-gutter: 20px;
+  --grid-color: rgb(255 0 0 / 10%);
+  --grid-columns: 8;
+  display: none;
+  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+  column-gap: var(--grid-gutter);
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  padding-inline: var(--grid-margin);
+  pointer-events: none;
+}
+
+.grid-overlay--active {
+  display: grid;
+}
+
+.grid-overlay__column {
+  min-width: 0;
+  background: var(--grid-color);
+  color: #ff0000;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  padding-block-start: 8px;
+  text-align: center;
+}
+
+.grid-overlay-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  background: Canvas;
+  color: CanvasText;
+  cursor: pointer;
+}
+
+.grid-overlay-toggle__icon {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-block: 2px solid currentColor;
+}
+
+.grid-overlay-toggle__icon::before,
+.grid-overlay-toggle__icon::after {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  width: 2px;
+  background: currentColor;
+}
+
+.grid-overlay-toggle__icon::before {
+  left: 5px;
+}
+
+.grid-overlay-toggle__icon::after {
+  right: 5px;
+}

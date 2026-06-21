@@ -1,0 +1,15 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  height: 56px;
+  margin-block-start: 24px;
+  padding-inline: 50px;
+}
+
+.site-header__logo {
+  display: block;
+  width: 32px;
+  height: 32px;
+}

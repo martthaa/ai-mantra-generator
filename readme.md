@@ -1,5 +1,9 @@
 # AI Mantra Generator
 
+## Demo
+
+[Open demo](https://martthaa.github.io/ai-mantra-generator/)
+
 ## Цілі проекту
 
 - Створити масштабовану структуру для AI Mantra Generator.

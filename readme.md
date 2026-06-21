@@ -1,16 +1,16 @@
-# Intake Blog Prototype
+# AI Mantra Generator
 
 ## Цілі проекту
 
-- Створити масштабовану структуру для прототипу блогу.
-- Підготувати окремі сторінки для Intake Blog, Playground та Components.
+- Створити масштабовану структуру для AI Mantra Generator.
+- Підготувати окремі сторінки для Intake, Playground та Components.
 - Забезпечити компонентний підхід до побудови інтерфейсу.
 - Додати технічну основу для перевірки UI-компонентів у sandbox-середовищі.
 - Додати 8-колоночну сітку для брейкпоінта 1920px з можливістю увімкнення та вимкнення.
 
 ## Сторінки
 
-- `index.html` — Intake Blog.
+- `index.html` — Intake.
 - `playground.html` — Playground.
 - `components.html` — Components.
 

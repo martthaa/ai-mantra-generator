@@ -26,6 +26,8 @@ Phase 2: Intake UI.
 - Music dropdown with single-select.
 - Length dropdown with single-select.
 - Quick prompts with multi-select.
+- Shader background with `@paper-design/shaders-react`.
+- Vite build for GitHub Pages deployment.
 
 ## In Progress
 

@@ -13,10 +13,7 @@ body {
 body {
   min-width: 320px;
   min-height: 100vh;
-  background-image: var(--page-background-image);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #8f8f8f;
 }
 
 button {

@@ -25,6 +25,8 @@ GSD Core is installed globally for Codex and local `.planning/` files are initia
 - Length dropdown with single-select.
 - Quick prompt examples with multi-select.
 - Grid overlay.
+- Shader background powered by `@paper-design/shaders-react`.
+- Vite production build for GitHub Pages.
 
 ## In Progress
 
@@ -41,8 +43,8 @@ GSD Core is installed globally for Codex and local `.planning/` files are initia
 ## Risks
 
 - Fonts are referenced but not installed locally.
-- Static JS component is growing and may need splitting if complexity increases.
+- HeroContent component is growing and may need splitting if complexity increases.
 - No browser-based verification has been run yet.
 
 ---
-*Last updated: 2026-06-21 after installing GSD Core*
+*Last updated: 2026-06-22 after adding shader background*

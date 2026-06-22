@@ -18,6 +18,12 @@
 - `playground.html` — Playground.
 - `components.html` — Components.
 
+## Commands
+
+- `npm run dev` — local development server.
+- `npm run build` — production build.
+- `npm run preview` — preview production build.
+
 ## Структура
 
 ```text

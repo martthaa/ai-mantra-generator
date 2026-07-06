@@ -1,52 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { Water } from '@paper-design/shaders-react';
-
-function useViewportSize() {
-  const [size, setSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
-
-  useEffect(() => {
-    function updateSize() {
-      setSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    }
-
-    window.addEventListener('resize', updateSize);
-
-    return () => {
-      window.removeEventListener('resize', updateSize);
-    };
-  }, []);
-
-  return size;
-}
 
 function ShaderBackground() {
-  const size = useViewportSize();
-
-  return (
-    <Water
-      width={size.width}
-      height={size.height}
-      image="https://paper.design/flowers.webp"
-      colorBack="#8f8f8f"
-      colorHighlight="#ffffff"
-      highlights={0.07}
-      layering={0.5}
-      edges={0.8}
-      waves={0.3}
-      caustic={0.1}
-      size={1}
-      speed={1}
-      scale={0.8}
-      fit="contain"
-    />
-  );
+  return <div className="shader-background__image" aria-hidden="true" />;
 }
 
 export function mountShaderBackground(target = document.body) {

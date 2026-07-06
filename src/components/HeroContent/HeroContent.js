@@ -21,12 +21,8 @@
       description: 'Atmospheric ambient soundscapes',
     },
     {
-      title: 'Nature',
-      description: 'Gentle nature sounds',
-    },
-    {
-      title: 'Electronic',
-      description: 'Relaxing modern electronic sound',
+      title: 'Tech House',
+      description: 'Rhythmic instrumental house background',
     },
   ];
   const lengthOptions = [
@@ -197,6 +193,9 @@
     play.setAttribute('aria-hidden', 'true');
     play.innerHTML =
       '<img class="hero-content__media-play-icon" src="./assets/icons/line-md_play-filled.svg" alt="">';
+    play.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
 
     const check = document.createElement('span');
     check.className = 'hero-content__media-check';
@@ -464,6 +463,15 @@
       }
 
       sessionStorage.setItem('intakePrompt', value);
+      sessionStorage.setItem(
+        'intakeConfig',
+        JSON.stringify({
+          keywords: Array.from(selectedKeywords),
+          voice: selectedVoice,
+          music: selectedMusic,
+          length: selectedLength,
+        }),
+      );
       window.location.href = './playground.html';
     });
 

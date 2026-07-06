@@ -16,6 +16,15 @@ body {
   background: #8f8f8f;
 }
 
+body.page-playground::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: rgb(0 0 0 / 80%);
+  pointer-events: none;
+}
+
 button {
   font: inherit;
 }
@@ -24,4 +33,11 @@ button {
   display: flex;
   align-items: center;
   min-height: calc(100vh - 80px);
+}
+
+#app[data-page='playground'] {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  overflow: hidden;
 }

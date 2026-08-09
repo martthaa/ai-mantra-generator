@@ -7,6 +7,10 @@
       "destination": "/waitlist.html"
     },
     {
+      "source": "/waitlist",
+      "destination": "/waitlist.html"
+    },
+    {
       "source": "/ai-mantra-generator/:path*",
       "destination": "/:path*"
     }

@@ -246,6 +246,10 @@ function createWaitlistConfirmationHtml(env, publicBaseUrl = '', marker = '') {
           padding-right: 24px !important;
         }
 
+        .email-footer-cell {
+          padding-bottom: 40px !important;
+        }
+
         .email-hero {
           width: 100% !important;
           max-width: 100% !important;
@@ -291,7 +295,7 @@ function createWaitlistConfirmationHtml(env, publicBaseUrl = '', marker = '') {
             </tr>
 
             <tr>
-              <td class="email-text-cell" bgcolor="#28235f" style="padding:40px 72px 0;background:#28235f;background-color:#28235f;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;color:#ffffff;mso-line-height-rule:exactly;">
+              <td class="email-text-cell email-footer-cell" bgcolor="#28235f" style="padding:40px 72px 0;background:#28235f;background-color:#28235f;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;color:#ffffff;mso-line-height-rule:exactly;">
                 <p style="margin:0 0 24px;font-size:16px;line-height:24px;font-weight:400;color:#ffffff;">
                   The photo above was taken on Kukul Polonyna in the Ukrainian Carpathians. Among thousands of purple crocuses, one white flower bloomed differently. We kept this photo because it reminds us that there's beauty in growing your own way. Take care of yourself.
                 </p>

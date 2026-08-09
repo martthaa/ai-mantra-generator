@@ -226,6 +226,33 @@ function createWaitlistConfirmationHtml(env, publicBaseUrl = '', marker = '') {
     <meta name="color-scheme" content="dark">
     <meta name="supported-color-schemes" content="dark">
     <title>You are on the Aystra waitlist</title>
+    <style>
+      @media only screen and (max-width: 600px) {
+        .email-page {
+          padding: 0 !important;
+        }
+
+        .email-shell {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        .email-logo-cell {
+          padding: 32px 24px 20px !important;
+        }
+
+        .email-text-cell {
+          padding-left: 24px !important;
+          padding-right: 24px !important;
+        }
+
+        .email-hero {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+        }
+      }
+    </style>
   </head>
   <body bgcolor="#28235f" style="margin:0;padding:0;background-color:#28235f;color:#ffffff;">
     <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;">
@@ -233,16 +260,16 @@ function createWaitlistConfirmationHtml(env, publicBaseUrl = '', marker = '') {
     </div>
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#28235f" style="width:100%;border-collapse:collapse;background-color:#28235f;">
       <tr>
-        <td align="center" bgcolor="#28235f" style="padding:40px 0;background-color:#28235f;">
-          <table role="presentation" width="680" cellspacing="0" cellpadding="0" border="0" bgcolor="#28235f" style="width:680px;max-width:100%;border-collapse:collapse;background:#28235f;background-color:#28235f;color:#ffffff;">
+        <td class="email-page" align="center" bgcolor="#28235f" style="padding:40px 0;background-color:#28235f;">
+          <table class="email-shell" role="presentation" width="680" cellspacing="0" cellpadding="0" border="0" bgcolor="#28235f" style="width:680px;max-width:100%;border-collapse:collapse;background:#28235f;background-color:#28235f;color:#ffffff;">
             <tr>
-              <td align="left" bgcolor="#28235f" style="padding:8px 72px 24px;background:#28235f;background-color:#28235f;color:#ffffff;">
+              <td class="email-logo-cell" align="left" bgcolor="#28235f" style="padding:8px 72px 24px;background:#28235f;background-color:#28235f;color:#ffffff;">
                 <img src="${logoUrl}" width="102" height="40" alt="Aystra" style="display:block;width:102px;height:auto;border:0;outline:none;text-decoration:none;">
               </td>
             </tr>
 
             <tr>
-              <td bgcolor="#28235f" style="padding:24px 72px 40px;background:#28235f;background-color:#28235f;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;color:#ffffff;mso-line-height-rule:exactly;">
+              <td class="email-text-cell" bgcolor="#28235f" style="padding:24px 72px 40px;background:#28235f;background-color:#28235f;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;color:#ffffff;mso-line-height-rule:exactly;">
                 <h1 style="margin:0 0 16px;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:26px;line-height:32.5px;font-weight:700;color:#ffffff;mso-line-height-rule:exactly;">
                   You are on the Aystra waitlist
                 </h1>
@@ -259,12 +286,12 @@ function createWaitlistConfirmationHtml(env, publicBaseUrl = '', marker = '') {
 
             <tr>
               <td bgcolor="#28235f" style="padding:0;background:#28235f;background-color:#28235f;">
-                <img src="${heroUrl}" width="680" height="340" alt="White crocus blooming among purple crocuses in the Ukrainian Carpathians." style="display:block;width:100%;height:auto;margin:0;border:0;outline:none;text-decoration:none;">
+                <img class="email-hero" src="${heroUrl}" width="680" height="340" alt="White crocus blooming among purple crocuses in the Ukrainian Carpathians." style="display:block;width:100%;max-width:680px;height:auto;margin:0;border:0;outline:none;text-decoration:none;">
               </td>
             </tr>
 
             <tr>
-              <td bgcolor="#28235f" style="padding:40px 72px 0;background:#28235f;background-color:#28235f;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;color:#ffffff;mso-line-height-rule:exactly;">
+              <td class="email-text-cell" bgcolor="#28235f" style="padding:40px 72px 0;background:#28235f;background-color:#28235f;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;color:#ffffff;mso-line-height-rule:exactly;">
                 <p style="margin:0 0 24px;font-size:16px;line-height:24px;font-weight:400;color:#ffffff;">
                   The photo above was taken on Kukul Polonyna in the Ukrainian Carpathians. Among thousands of purple crocuses, one white flower bloomed differently. We kept this photo because it reminds us that there's beauty in growing your own way. Take care of yourself.
                 </p>

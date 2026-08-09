@@ -290,6 +290,17 @@
   background: transparent;
 }
 
+.waitlist-form__input:-webkit-autofill,
+.waitlist-form__input:-webkit-autofill:hover,
+.waitlist-form__input:-webkit-autofill:focus,
+.waitlist-form__input:-webkit-autofill:active {
+  border: 0;
+  -webkit-box-shadow: 0 0 0 1000px rgb(0 32 106 / 0%) inset;
+  -webkit-text-fill-color: #ffffff;
+  caret-color: #ffffff;
+  transition: background-color 9999s ease-out, color 9999s ease-out;
+}
+
 .waitlist-form__shell:focus-within {
   border-color: rgb(255 255 255 / 48%);
 }

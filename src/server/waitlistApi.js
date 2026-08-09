@@ -212,7 +212,7 @@ function createWaitlistConfirmationText() {
   ].join('\n');
 }
 
-function createWaitlistConfirmationHtml(env, publicBaseUrl = '', marker = '') {
+function createWaitlistConfirmationHtml(env, publicBaseUrl = '') {
   const heroUrl =
     env.WAITLIST_EMAIL_HERO_URL || createPublicAssetUrl(env, publicBaseUrl, EMAIL_HERO_PATH);
   const logoUrl =
@@ -265,7 +265,10 @@ function createWaitlistConfirmationHtml(env, publicBaseUrl = '', marker = '') {
   </head>
   <body bgcolor="#28235f" style="margin:0;padding:0;background-color:#28235f;color:#ffffff;">
     <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;">
-      You are on the Aystra waitlist. We'll notify you when Aystra becomes available. ${marker}
+      You are on the Aystra waitlist. We'll notify you when Aystra becomes available.
+    </div>
+    <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;">
+      &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
     </div>
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#28235f" style="width:100%;border-collapse:collapse;background-color:#28235f;">
       <tr>
@@ -319,12 +322,12 @@ function createWaitlistConfirmationHtml(env, publicBaseUrl = '', marker = '') {
 </html>`;
 }
 
-function createConfirmationEmail(env, email, publicBaseUrl, marker) {
+function createConfirmationEmail(env, email, publicBaseUrl) {
   return {
     to: [email],
     subject: 'Welcome to the Aystra waitlist',
     text: createWaitlistConfirmationText(),
-    html: createWaitlistConfirmationHtml(env, publicBaseUrl, marker),
+    html: createWaitlistConfirmationHtml(env, publicBaseUrl),
   };
 }
 
@@ -339,12 +342,7 @@ async function sendConfirmationEmail(env, entry, publicBaseUrl) {
   }
 
   const idempotencyKey = `waitlist-confirmation-${entry.emailHash}-${entry.createdAtIso}`;
-  const confirmationEmail = createConfirmationEmail(
-    env,
-    entry.emailNormalized,
-    publicBaseUrl,
-    idempotencyKey,
-  );
+  const confirmationEmail = createConfirmationEmail(env, entry.emailNormalized, publicBaseUrl);
   const resendResponse = await fetch(RESEND_EMAILS_URL, {
     method: 'POST',
     headers: {

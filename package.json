@@ -1,14 +1,20 @@
 {
+  "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
+    "dev": "vite --host 127.0.0.1 --port 5188 --strictPort",
     "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0"
+    "preview": "vite preview --host 127.0.0.1 --port 5188 --strictPort",
+    "ux:agent": "playwright test --headed --project=chrome-desktop"
   },
   "dependencies": {
     "@paper-design/shaders-react": "^0.0.76",
     "@vitejs/plugin-react": "^6.0.2",
+    "firebase": "^12.15.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "vite": "^8.0.16"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1"
   }
 }

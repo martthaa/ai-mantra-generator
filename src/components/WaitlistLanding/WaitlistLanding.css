@@ -1,0 +1,457 @@
+.waitlist-landing {
+  position: relative;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    url("../../../assets/images/homebg-cropped.png")
+    center / cover
+    no-repeat;
+  color: #ffffff;
+  font-family: Geist, Inter, sans-serif;
+}
+
+.waitlist-landing::before {
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 10%);
+  backdrop-filter: blur(40px);
+  content: '';
+}
+
+.waitlist-landing__header {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1512px, calc(100% - 100px));
+  height: 56px;
+  padding: 4px 4px 4px 24px;
+  transform: translateX(-50%);
+}
+
+.waitlist-landing__home {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 32px;
+}
+
+.waitlist-landing__logo {
+  display: block;
+  width: 28px;
+  height: 32px;
+  object-fit: contain;
+  transform-origin: center;
+}
+
+.waitlist-landing__home:hover .waitlist-landing__logo,
+.waitlist-landing__home:focus-visible .waitlist-landing__logo {
+  animation: waitlist-logo-hover-rotate 760ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.waitlist-landing__badge {
+  display: none;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border: 1px solid rgb(255 255 255 / 24%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 10%);
+  color: rgb(255 255 255 / 84%);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.waitlist-landing__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 562px;
+  max-width: calc(100% - 48px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -269px;
+  padding: 0;
+}
+
+.waitlist-landing__eyebrow {
+  display: none;
+  margin: 0;
+  color: rgb(255 255 255 / 64%);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.waitlist-landing__title {
+  width: 844px;
+  max-width: calc(100vw - 48px);
+  margin: 0;
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.waitlist-landing__copy {
+  display: block;
+  align-self: center;
+  width: 562px;
+  max-width: 100%;
+  height: 20px;
+  margin: 16px 0 0;
+  overflow: visible;
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.waitlist-landing__success-icon {
+  display: none;
+  width: 63px;
+  height: 63px;
+  margin-top: 48px;
+  backdrop-filter: blur(0.5px);
+  filter:
+    drop-shadow(-1px -1px 0 rgb(255 255 255 / 18%))
+    drop-shadow(1px 1px 0 rgb(255 255 255 / 8%))
+    drop-shadow(0 6px 14px rgb(255 255 255 / 10%));
+  opacity: 1;
+}
+
+.waitlist-landing__success-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.waitlist-landing__success-path {
+  animation: waitlist-check-draw 700ms ease-out forwards;
+  stroke-dasharray: 72;
+  stroke-dashoffset: 72;
+}
+
+.waitlist-landing__success-path--glow {
+  opacity: 1;
+}
+
+.waitlist-landing__success-path--glass {
+  filter:
+    drop-shadow(-0.6px -0.6px 0 rgb(255 255 255 / 22%))
+    drop-shadow(0.7px 0.9px 0 rgb(255 255 255 / 8%));
+}
+
+.waitlist-landing__success-path--highlight {
+  transform: translate(-0.7px, -0.7px);
+  opacity: 0.62;
+}
+
+.waitlist-landing--success .waitlist-landing__copy {
+  width: 640px;
+  max-width: calc(100vw - 48px);
+  height: auto;
+  white-space: normal;
+}
+
+.waitlist-landing--success .waitlist-form,
+.waitlist-landing--success .waitlist-landing__privacy {
+  display: none;
+}
+
+.waitlist-landing--success .waitlist-landing__success-icon {
+  display: block;
+}
+
+.waitlist-landing--success .waitlist-landing__logo {
+  animation: waitlist-logo-rotate 760ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes waitlist-check-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes waitlist-logo-rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  58% {
+    transform: rotate(58deg) scale(1.04);
+  }
+
+  100% {
+    transform: rotate(42deg) scale(1);
+  }
+}
+
+@keyframes waitlist-logo-hover-rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  58% {
+    transform: rotate(58deg) scale(1.04);
+  }
+
+  100% {
+    transform: rotate(42deg) scale(1);
+  }
+}
+
+.waitlist-form {
+  width: min(896px, 100%);
+  margin-top: 32px;
+}
+
+.waitlist-form__label {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: 0;
+  color: rgb(255 255 255 / 72%);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.waitlist-form__shell {
+  display: flex;
+  width: 100%;
+  min-height: 61px;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  border: 0.5px solid rgb(255 255 255 / 15%);
+  border-radius: 24px;
+  background: rgb(0 32 106 / 80%);
+}
+
+.waitlist-form__input-frame {
+  display: flex;
+  height: 36px;
+  flex: 1 1 auto;
+  align-items: center;
+  align-self: stretch;
+  gap: 10px;
+  min-width: 0;
+  overflow: visible;
+  padding: 8px 10px;
+}
+
+.waitlist-form__input {
+  width: 100%;
+  height: 20px;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  background: transparent;
+  color: #ffffff;
+  font-family: "DM Sans", Geist, Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.waitlist-form__input::placeholder {
+  color: rgb(255 255 255 / 50%);
+}
+
+.waitlist-form__input:focus {
+  background: transparent;
+}
+
+.waitlist-form__shell:focus-within {
+  border-color: rgb(255 255 255 / 48%);
+}
+
+.waitlist-form__input:disabled {
+  opacity: 0.72;
+}
+
+.waitlist-form__submit {
+  position: static;
+  display: inline-flex;
+  width: auto;
+  min-width: 0;
+  height: 36px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 16px;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 12px;
+  opacity: 0;
+  overflow: visible;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, rgb(255 255 255 / 20%) 0%, rgb(255 255 255 / 8%) 100%),
+    rgb(255 255 255 / 8%);
+  backdrop-filter: blur(4px);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 35%),
+    inset 0 -1px 0 rgb(255 255 255 / 8%);
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Geist, Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 23px;
+  transition:
+    opacity 140ms ease,
+    background 140ms ease,
+    color 140ms ease,
+    filter 140ms ease;
+  white-space: nowrap;
+  background-clip: padding-box;
+  background-origin: border-box;
+}
+
+.waitlist-form--valid .waitlist-form__submit {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.waitlist-form__submit:hover,
+.waitlist-form__submit:focus-visible {
+  border-color: transparent;
+  background:
+    linear-gradient(90deg, #fc222a 0%, #ffa052 45%, #6851eb 100%)
+    border-box;
+  background-clip: border-box;
+  box-shadow: none;
+  color: #ffffff;
+  filter: brightness(1.08);
+}
+
+.waitlist-form__submit:disabled {
+  cursor: default;
+  opacity: 0.72;
+}
+
+.waitlist-form__status {
+  min-height: 22px;
+  margin: 12px 0 0;
+  color: rgb(255 255 255 / 80%);
+  font-family: "DM Sans", Geist, Inter, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.waitlist-form__status[data-tone='success'] {
+  color: rgb(255 255 255 / 80%);
+}
+
+.waitlist-form__status[data-tone='error'] {
+  color: rgb(255 255 255 / 80%);
+}
+
+.waitlist-form__status[data-tone='loading'] {
+  color: rgb(255 255 255 / 80%);
+}
+
+.waitlist-landing__privacy {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  z-index: 1;
+  width: min(1512px, calc(100% - 48px));
+  margin: 0;
+  color: rgb(255 255 255 / 70%);
+  font-family: "DM Sans", Geist, Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 720px) {
+  .waitlist-landing__header {
+    width: calc(100% - 48px);
+    padding-left: 0;
+  }
+
+  .waitlist-landing__content {
+    margin-top: -156px;
+  }
+
+  .waitlist-landing__title {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .waitlist-landing__copy {
+    width: 430px;
+    max-width: calc(100vw - 72px);
+    height: auto;
+    font-size: 15px;
+    line-height: 20px;
+    white-space: normal;
+  }
+
+  .waitlist-form__submit {
+    width: auto;
+    min-width: 0;
+    padding-inline: 16px;
+  }
+
+  .waitlist-form--valid .waitlist-form__submit {
+    border-color: transparent;
+    background:
+      linear-gradient(90deg, #fc222a 0%, #ffa052 45%, #6851eb 100%)
+      border-box;
+    background-clip: border-box;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .waitlist-landing__content {
+    max-width: calc(100% - 32px);
+  }
+
+  .waitlist-form__shell {
+    gap: 10px;
+  }
+
+  .waitlist-form__input-frame {
+    padding-inline: 8px;
+  }
+
+  .waitlist-form__submit {
+    padding-inline: 12px;
+  }
+}

@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("../../assets/fonts/dm-sans-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("../../assets/fonts/dm-sans-light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
 :root {
   --breakpoint-1920: 1920px;
   --breakpoint-1440: 1440px;

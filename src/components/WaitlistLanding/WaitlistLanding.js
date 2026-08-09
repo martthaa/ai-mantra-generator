@@ -1,4 +1,6 @@
 import { joinWaitlist } from '../../services/waitlistService.js';
+import waitlistCheckUrl from '../../../assets/animations/waitlist-check.json?url';
+import logoUrl from '../../../assets/icons/logo_Aystra.png?url';
 
 (function initWaitlistLanding(global) {
   const rootId = 'waitlist-landing';
@@ -11,7 +13,7 @@ import { joinWaitlist } from '../../services/waitlistService.js';
   function createLogo() {
     const logo = document.createElement('img');
     logo.className = 'waitlist-landing__logo';
-    logo.src = './assets/icons/logo_Aystra.png';
+    logo.src = logoUrl;
     logo.alt = 'Aystra';
 
     return logo;
@@ -32,7 +34,7 @@ import { joinWaitlist } from '../../services/waitlistService.js';
 
   async function renderAnimatedCheck(target) {
     try {
-      const response = await fetch('./assets/animations/waitlist-check.json');
+      const response = await fetch(waitlistCheckUrl);
       const lottieData = await response.json();
       const pathData = getShapePath(lottieData);
 

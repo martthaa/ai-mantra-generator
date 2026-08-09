@@ -250,6 +250,11 @@ function createWaitlistConfirmationHtml(env, publicBaseUrl = '', marker = '') {
           padding-bottom: 40px !important;
         }
 
+        .email-hero-cell {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+
         .email-hero {
           width: 100% !important;
           max-width: 100% !important;
@@ -289,8 +294,8 @@ function createWaitlistConfirmationHtml(env, publicBaseUrl = '', marker = '') {
             </tr>
 
             <tr>
-              <td bgcolor="#28235f" style="padding:0;background:#28235f;background-color:#28235f;">
-                <img class="email-hero" src="${heroUrl}" width="680" height="340" alt="White crocus blooming among purple crocuses in the Ukrainian Carpathians." style="display:block;width:100%;max-width:680px;height:auto;margin:0;border:0;outline:none;text-decoration:none;">
+              <td class="email-hero-cell" bgcolor="#28235f" style="padding:0 72px;background:#28235f;background-color:#28235f;">
+                <img class="email-hero" src="${heroUrl}" width="536" height="268" alt="White crocus blooming among purple crocuses in the Ukrainian Carpathians." style="display:block;width:100%;max-width:536px;height:auto;margin:0;border:0;outline:none;text-decoration:none;">
               </td>
             </tr>
 

@@ -227,6 +227,21 @@ function createWaitlistConfirmationHtml(env, publicBaseUrl = '') {
     <meta name="supported-color-schemes" content="dark">
     <title>You are on the Aystra waitlist</title>
     <style>
+      :root {
+        color-scheme: dark;
+        supported-color-schemes: dark;
+      }
+
+      .email-bg {
+        background: #28235f !important;
+        background-color: #28235f !important;
+        background-image: linear-gradient(#28235f, #28235f) !important;
+      }
+
+      .email-copy {
+        color: #ffffff !important;
+      }
+
       @media only screen and (max-width: 600px) {
         .email-page {
           padding: 0 !important;
@@ -263,52 +278,52 @@ function createWaitlistConfirmationHtml(env, publicBaseUrl = '') {
       }
     </style>
   </head>
-  <body bgcolor="#28235f" style="margin:0;padding:0;background-color:#28235f;color:#ffffff;">
+  <body class="email-bg email-copy" bgcolor="#28235f" style="margin:0;padding:0;background:#28235f;background-color:#28235f;background-image:linear-gradient(#28235f,#28235f);color:#ffffff;">
     <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;">
       You are on the Aystra waitlist. We'll notify you when Aystra becomes available.
     </div>
     <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;">
       &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
     </div>
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#28235f" style="width:100%;border-collapse:collapse;background-color:#28235f;">
+    <table class="email-bg" role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#28235f" style="width:100%;border-collapse:collapse;background:#28235f;background-color:#28235f;background-image:linear-gradient(#28235f,#28235f);">
       <tr>
-        <td class="email-page" align="center" bgcolor="#28235f" style="padding:40px 0;background-color:#28235f;">
-          <table class="email-shell" role="presentation" width="680" cellspacing="0" cellpadding="0" border="0" bgcolor="#28235f" style="width:680px;max-width:100%;border-collapse:collapse;background:#28235f;background-color:#28235f;color:#ffffff;">
+        <td class="email-page email-bg" align="center" bgcolor="#28235f" style="padding:40px 0;background:#28235f;background-color:#28235f;background-image:linear-gradient(#28235f,#28235f);">
+          <table class="email-shell email-bg email-copy" role="presentation" width="680" cellspacing="0" cellpadding="0" border="0" bgcolor="#28235f" style="width:680px;max-width:100%;border-collapse:collapse;background:#28235f;background-color:#28235f;background-image:linear-gradient(#28235f,#28235f);color:#ffffff;">
             <tr>
-              <td class="email-logo-cell" align="left" bgcolor="#28235f" style="padding:8px 72px 24px;background:#28235f;background-color:#28235f;color:#ffffff;">
+              <td class="email-logo-cell email-bg email-copy" align="left" bgcolor="#28235f" style="padding:8px 72px 24px;background:#28235f;background-color:#28235f;background-image:linear-gradient(#28235f,#28235f);color:#ffffff;">
                 <img src="${logoUrl}" width="102" height="40" alt="Aystra" style="display:block;width:102px;height:auto;border:0;outline:none;text-decoration:none;">
               </td>
             </tr>
 
             <tr>
-              <td class="email-text-cell" bgcolor="#28235f" style="padding:24px 72px 40px;background:#28235f;background-color:#28235f;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;color:#ffffff;mso-line-height-rule:exactly;">
-                <h1 style="margin:0 0 16px;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:26px;line-height:32.5px;font-weight:700;color:#ffffff;mso-line-height-rule:exactly;">
+              <td class="email-text-cell email-bg email-copy" bgcolor="#28235f" style="padding:24px 72px 40px;background:#28235f;background-color:#28235f;background-image:linear-gradient(#28235f,#28235f);font-family:Helvetica Neue, Helvetica, Arial, sans-serif;color:#ffffff;mso-line-height-rule:exactly;">
+                <h1 class="email-copy" style="margin:0 0 16px;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:26px;line-height:32.5px;font-weight:700;color:#ffffff !important;mso-line-height-rule:exactly;">
                   You are on the Aystra waitlist
                 </h1>
 
-                <p style="margin:0 0 24px;font-size:16px;line-height:24px;font-weight:400;color:#ffffff;">
+                <p class="email-copy" style="margin:0 0 24px;font-size:16px;line-height:24px;font-weight:400;color:#ffffff !important;">
                   Thank you for being here from the very beginning.
                 </p>
 
-                <p style="margin:0;font-size:16px;line-height:24px;font-weight:400;color:#ffffff;">
-                  We'll let you know when Aystra is ready. Until then, here's something we often remind ourselves: <span style="text-decoration:underline;">the way you speak to yourself shapes the way you see the world.</span>
+                <p class="email-copy" style="margin:0;font-size:16px;line-height:24px;font-weight:400;color:#ffffff !important;">
+                  We'll let you know when Aystra is ready. Until then, here's something we often remind ourselves: <span class="email-copy" style="color:#ffffff !important;text-decoration:underline;">the way you speak to yourself shapes the way you see the world.</span>
                 </p>
               </td>
             </tr>
 
             <tr>
-              <td class="email-hero-cell" bgcolor="#28235f" style="padding:0 72px;background:#28235f;background-color:#28235f;">
+              <td class="email-hero-cell email-bg" bgcolor="#28235f" style="padding:0 72px;background:#28235f;background-color:#28235f;background-image:linear-gradient(#28235f,#28235f);">
                 <img class="email-hero" src="${heroUrl}" width="536" height="268" alt="White crocus blooming among purple crocuses in the Ukrainian Carpathians." style="display:block;width:100%;max-width:536px;height:auto;margin:0;border:0;outline:none;text-decoration:none;">
               </td>
             </tr>
 
             <tr>
-              <td class="email-text-cell email-footer-cell" bgcolor="#28235f" style="padding:40px 72px 0;background:#28235f;background-color:#28235f;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;color:#ffffff;mso-line-height-rule:exactly;">
-                <p style="margin:0 0 24px;font-size:16px;line-height:24px;font-weight:400;color:#ffffff;">
+              <td class="email-text-cell email-footer-cell email-bg email-copy" bgcolor="#28235f" style="padding:40px 72px 0;background:#28235f;background-color:#28235f;background-image:linear-gradient(#28235f,#28235f);font-family:Helvetica Neue, Helvetica, Arial, sans-serif;color:#ffffff;mso-line-height-rule:exactly;">
+                <p class="email-copy" style="margin:0 0 24px;font-size:16px;line-height:24px;font-weight:400;color:#ffffff !important;">
                   The photo above was taken on Kukul Polonyna in the Ukrainian Carpathians. Among thousands of purple crocuses, one white flower bloomed differently. We kept this photo because it reminds us that there's beauty in growing your own way. Take care of yourself.
                 </p>
 
-                <p style="margin:0 0 0;font-size:16px;line-height:24px;font-weight:400;color:#ffffff;">
+                <p class="email-copy" style="margin:0 0 0;font-size:16px;line-height:24px;font-weight:400;color:#ffffff !important;">
                   See you soon,<br>
                   Aystra
                 </p>
